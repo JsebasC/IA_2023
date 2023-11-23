@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clasificación de Flores</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+        }
+        #container {
+            margin: 20px;
+        }
+        #imageInput {
+            display: none;
+        }
+        label {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clasificación de Flores</h1>
+    <div id="container">
+        <form id="imageForm" enctype="multipart/form-data">
+            <input type="file" id="imageInput" name="imageInput" accept="image/*">
+            <button type="button" id="uploadButton">Subir Imagen</button>
+            <button type="submit">Predecir</button>
+        </form>
+        <p>Clase predicha: <span id="predictedClass" name="predictedClass"></span></p>
+        <p>Imagen:</p>
+        <img id="imageUpload" alt="Imagen">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
